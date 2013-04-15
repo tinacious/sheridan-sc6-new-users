@@ -22,7 +22,8 @@ h1 {
   font-size: 4rem;
   clear: none;
 }
-a {
+a,
+a:visited {
   color: #0060ac;
   font-weight: 700;
   text-decoration: none;
@@ -54,8 +55,35 @@ code {
   padding-left: .5rem;
 }
 .container {
+  display: block;
+  width: 102.08333333333333%;
+  margin: 0 -1.0416666666666665%;
+  *zoom: 1;
   margin: 0 auto;
   width: 90%;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+.half {
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+}
+.half.aside {
+  background: #efefef;
+  display: inline;
+  float: left;
+  width: 39.58333333333333%;
+  margin: 0 1.0416666666666665%;
+  padding: 0 3rem;
+  margin-top: 3rem;
 }
 img {
   max-height: 80%;
@@ -63,6 +91,12 @@ img {
 img.center {
   margin: 1.5rem auto;
   display: block;
+}
+h2.center,
+h3.center,
+h4.center,
+p.center {
+  text-align: center;
 }
 #header {
   width: 100%;
@@ -72,7 +106,9 @@ img.center {
   z-index: 10;
   color: #fff;
   background: #0060ac;
+  background: rgba(0, 96, 172, 0.85);
   padding: 0.75rem 0;
+  box-shadow: 0 0 20px rgba(43, 43, 43, 0.8);
 }
 #header .logo {
   display: inline;

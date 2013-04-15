@@ -12,13 +12,11 @@
 // fonts
 @adelle: adelle, georgia, sans-serif;
 
-// * {background: fade(#000,10%);}
 body {
 	-webkit-font-smoothing: antialiased;
 	font-family: @adelle;
 	font-size: 30px;
 	font-size: 3rem;
-	// background: #f7f7f7;
 }
 
 h1 {
@@ -27,22 +25,18 @@ h1 {
 	font-size: 4rem;
 	clear: none;
 }
-
-a {
+a, a:visited {
 	color: @blue;
 	font-weight: 700;
 	text-decoration: none;
 }
-
 p, ul, ol {
 	line-height: 1.5em;
 }
-
 pre {
 	font-size: 18px;
 	font-size: 1.8rem;
 }
-
 blockquote {
 	text-align: left;
 	width: 70%;
@@ -55,23 +49,40 @@ blockquote {
 	border-radius: 6px;
 	border-radius: .6rem;
 }
-
 code {
 	font-style: normal;
 	padding-left: 5px;
 	padding-left: .5rem;
 }
 
+// helper elements
 .container {
+	.row();
 	margin: 0 auto;
 	width: 90%;
 }
+.half {
+	.column(6);
+	&.aside {
+		background: #efefef;
+		.column(5);
+		padding: 0 3rem;
+		margin-top: 3rem;
+	}
+}
+
+// helper styles
 img {
 	max-height: 80%;
 }
 img.center {
 	margin: 1.5rem auto;
 	display: block;
+}
+h2, h3, h4, p {
+	&.center {
+		text-align: center;
+	}
 }
 
 #header {
@@ -82,7 +93,9 @@ img.center {
 	z-index: 10;
 	color: #fff;
 	background: @blue;
+	background: fade(@blue,85%);
 	padding: 0.75rem 0;
+	box-shadow: 0 0 20px fade(@darkgrey,80%);
 	.logo {
 		.column(2);
 		padding: 1rem 0 0 0;
