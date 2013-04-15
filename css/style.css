@@ -1,0 +1,163 @@
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: adelle, georgia, sans-serif;
+  font-size: 30px;
+  font-size: 3rem;
+}
+h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 4rem;
+  clear: none;
+}
+a {
+  color: #0060ac;
+  font-weight: 700;
+  text-decoration: none;
+}
+p,
+ul,
+ol {
+  line-height: 1.5em;
+}
+pre {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+blockquote {
+  text-align: left;
+  width: 70%;
+  margin: 10px auto;
+  margin: 1rem auto;
+  background: #fff;
+  border: solid 3px #959db5;
+  padding: 0 40px;
+  padding: 0 4rem;
+  border-radius: 6px;
+  border-radius: .6rem;
+}
+code {
+  font-style: normal;
+  padding-left: 5px;
+  padding-left: .5rem;
+}
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+img {
+  max-height: 80%;
+}
+img.center {
+  margin: 1.5rem auto;
+  display: block;
+}
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  color: #fff;
+  background: #0060ac;
+  padding: 0.75rem 0;
+}
+#header .logo {
+  display: inline;
+  float: left;
+  width: 14.583333333333334%;
+  margin: 0 1.0416666666666665%;
+  padding: 1rem 0 0 0;
+}
+#header .logo img {
+  width: 220px;
+  max-width: 100%;
+}
+#header h1 {
+  display: inline;
+  float: left;
+  width: 81.25%;
+  margin: 0 1.0416666666666665%;
+  padding-top: 0.5rem;
+}
+#header a {
+  color: #fff;
+}
+#header p {
+  margin: 0;
+}
+.slide {
+  margin: 0 auto;
+  width: 99%;
+  padding: 120px 0;
+  padding: 12rem 0;
+  height: 50rem;
+}
+@media (max-width: 1401px) and (min-width: 1520px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1400px) {
+  html {
+    font-size: 11px;
+  }
+}
+/* target screen width  */
+@media (max-width: 1280px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1160px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 1040px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 920px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 6px;
+  }
+}
+@media (max-width: 680px) {
+  html {
+    font-size: 5px;
+  }
+}
+@media (max-width: 560px) {
+  html {
+    font-size: 4px;
+  }
+}
+@media (max-width: 440px) {
+  html {
+    font-size: 3px;
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 3px;
+  }
+}
