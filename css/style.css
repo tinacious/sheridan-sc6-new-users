@@ -107,7 +107,7 @@ p.center {
   color: #fff;
   background: #0060ac;
   background: rgba(0, 96, 172, 0.85);
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   box-shadow: 0 0 20px rgba(43, 43, 43, 0.8);
 }
 #header .logo {
