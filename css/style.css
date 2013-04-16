@@ -141,6 +141,48 @@ p.center {
   padding: 12rem 0;
   height: 50rem;
 }
+a.toc-link {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: #fff;
+  color: #0060ac !important;
+  padding: 0 1rem;
+  display: block;
+  width: 8rem;
+  height: 78%;
+  padding-top: 1.5%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#toc_menu {
+  position: absolute;
+  top: 8.2rem;
+  right: 0;
+  display: block;
+  background: rgba(0, 96, 172, 0.85);
+  font-size: 1.6rem;
+  font-weight: 700;
+  z-index: 9999;
+}
+#toc_menu a {
+  display: block;
+  padding: 0.5rem 2rem;
+  border-left: 3px solid #0060ac;
+}
+#toc_menu a:hover {
+  background: #efefef;
+  color: #0060ac;
+  border-left: 3px solid #f8b21e;
+}
+#toc_menu ul {
+  padding: 0;
+  margin: 0;
+}
+#toc_menu li {
+  list-style-type: none;
+}
 @media (max-width: 1401px) and (min-width: 1520px) {
   html {
     font-size: 12px;

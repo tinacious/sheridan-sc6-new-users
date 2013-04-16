@@ -1,9 +1,10 @@
+<?php $title = 'Sitecore 6: New User training';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<title>Sitecore: New User Training</title>
+	<title><?php print $title;?></title>
 	<script type="text/javascript" src="//use.typekit.net/cfo3gqy.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
@@ -17,7 +18,17 @@
 	  $(document).ready(function() {
 			var deck = new $.scrolldeck({
 				easing: 'easeInOutExpo'
-			});	  
+			});
+			// Table of Contents
+			$('#toc_menu').hide();
+			$('a.toc-link').mouseover(function(){
+				$('#toc_menu').show();
+				return false;
+			});
+			$('.slide').click(function(){
+				$('#toc_menu').hide();
+			});
+			buildTOC('h2','toc_menu');
 	  });
 	</script>
 </head>
@@ -27,8 +38,10 @@
 			<div class="logo">
 				<img src="img/sheridan-logo.png" alt="Sheridan College logo" />
 			</div>
-			<h1>Sitecore: New User Training</h1>
+			<h1><?php print $title;?></h1>
 		</div>
+		<a class="toc-link" href="#">Table of Contents</a>
+		<nav id="toc_menu"></nav>
 	</div>
 
 
@@ -164,5 +177,42 @@
 		</div>
 	</div>
 
+	<script>
+	$(document).ready(function(){
+		jQuery(function() {
+			jQuery('a[href*=#]').click(function() {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var $target = jQuery(this.hash);
+					var $url = this.hash.slice(1);
+					var $scrollTime = 600;
+
+					function updateUrl() {
+						window.location.hash = encodeURIComponent($url);
+					}
+					$target = $target.length && $target || jQuery('[name=' + $url + ']');
+					if ($target.length) {
+						var targetOffset = $target.offset().top;
+						jQuery('html,body').animate({scrollTop: targetOffset - 160}, $scrollTime);
+						//setTimeout(updateUrl, $scrollTime + 100)
+						return false;
+					}
+				}
+			});
+		});
+	});
+	// Build TOC
+	function buildTOC(findTag, whereGoes) {
+		var anchorCount = 0;
+		// Create a list that will hold the TOC
+		var List = $("<ul id='theTOC'>");
+
+		// for each one of the header tags, create a new named anchor and insert it into, the header tag. Then add a new link to the list that points to the named anchor
+		$("div:not([id=nav]) " + findTag).each(function(){
+			$(this).html("<a name='toc" + anchorCount + "'></a>" + $(this).html());
+			List.append($("<li><a href='#toc" + anchorCount++ + "'>" + $(this).text() + "</a></li>"));
+		});
+		$("#" + whereGoes).append(List);
+	}
+	</script>
 </body>
 </html>
