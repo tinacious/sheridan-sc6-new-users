@@ -44,6 +44,19 @@
 		<nav id="toc_menu"></nav>
 	</div>
 
+	<div class="slide">
+		<div class="container center">
+			<h2>SiteCore New User Training</h2>
+			<h3>Christina Holly</h3>
+			<p>
+				Web Design &amp; Development, Creative Services, Marketing &amp; Communications
+			</p>
+			<p>
+				<a href="mailto:christina.holly@sheridancollege.ca">christina.holly@sheridancollege.ca</a>
+			</p>
+			
+		</div>
+	</div>
 
 	<div class="slide">
 		<div class="container">
